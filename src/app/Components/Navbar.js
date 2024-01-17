@@ -13,15 +13,16 @@ export const Navbar = () => {
   };
   return (
     <>
-
-      <div className="navbar bg-white relative z-20 flex justify-between  items-center px-5 py-5 md:px-20 md:py-3 lg:px-24 lg:py-4">
-        <div className="w-24 h-10 md:w-28 md:h-14 lg:h-20 lg:w-36 xl:h-24 xl:w-48 2xl:h-56 ">
+      <div className="navbar bg-white  relative z-20 flex justify-between  items-center px-5 py-5 md:px-20 md:py-3 lg:px-24 lg:py-4">
+        <div className="w-24 h-10 md:w-28 md:h-14 lg:h-20 lg:w-36  xl:h-24 xl:w-48 ">
           <img src={svg} alt="logo" className="w-full" />
         </div>
 
         <div className="nav-Btn flex">
-          <button className="md:text-black font-sora font-normal md:font-medium md:mr-4 md:border-solid md:p-2 md:px-5 md:bg-[#FCBB17] md:border-2 md:rounded-full lg:mr-6 lg:px-7  " >Let's Talk</button>
-          
+          <button className="md:text-black font-sora font-normal md:font-medium md:mr-4 md:border-solid md:p-2 md:px-5 md:bg-[#FCBB17] md:border-2 md:rounded-full lg:mr-6 lg:px-7  ">
+            Let's Talk
+          </button>
+
           <button
             className={`burger ${isActive ? "active" : ""}`}
             onClick={handleBurgerClick}
@@ -33,8 +34,7 @@ export const Navbar = () => {
           isDisplay ? "opacity-100" : ""
         }`}
       >
-         <Links/>         
-        
+        <Links />
 
         <div className="absolute font-sora flex flex-col justify-around  bottom-[10%] translate-x-[-38%] left-[36%] text-left w-[90%] list-none text-[13px] md:left-[75%] md:w-[27%] md:bottom-[40%] md:[-15%] md:flex-col lg:text-xl xl:bottom-[28%]  ">
           <div className="px-5">

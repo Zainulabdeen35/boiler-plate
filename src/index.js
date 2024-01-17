@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import DerivedState from './app/Components/DerivedState'
-import SnapShot from './app/Components/Snapshot'
+import { App } from './App'
+
+
 
 // import { Provider as ReduxProvider } from 'react-redux'
 // import { persistor } from './app/Redux/store'
@@ -19,8 +20,8 @@ ReactDOM.render(
 
   <>
 
-  < DerivedState Show= "getDrivedStateFromPros" /><br/>
-  <SnapShot/>
+  < App Show= "getDrivedStateFromPros" /><br/>
+  
   </>
 , document.getElementById(`root`),
 )

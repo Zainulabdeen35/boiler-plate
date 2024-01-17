@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+body {
+ 
+  font-family: sans-serif;
+  color: white;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.burger {
+  height: 45px;
+  width: 45px;
+  background: transparent;
+  transition: all 250ms ease-out;
+  cursor: pointer;
+  border: 2px black solid;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-radius: 50px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
+
+.burger:before,
+.burger:after {
+  content: "";
+  width: 16px;
+  height: 2px;
+  position: absolute;
+  background: #1a1a1a;
+  transition: all 250ms ease-out;
+  will-change: transform;
+}
+
+.burger:before {
+  transform: translateY(-4px);
+}
+
+.burger:after {
+  transform: translateY(4px);
+}
+
+.active.burger:before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.active.burger:after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+
+.link {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+  font-weight: 900;
+  transition: 0.5s;
+  position: absolute;
+  /* color: aqua;  */
+
+}
+
+.link:hover{
+  -webkit-text-stroke: 1px rgb(221, 147, 11);
+  text-shadow: 1px 1px 1px rgb(221, 147, 11), 0 0 20px rgb(221, 147, 11), 0 0 3px rgb(221, 147, 11);
+  transform: translateX(7%);
+  color: black;
+  cursor: pointer;
+}
+.link:active {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  cursor: pointer;
 }
